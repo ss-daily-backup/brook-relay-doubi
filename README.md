@@ -6,3 +6,9 @@
 - 禁止更新
 - 只下载指定版本 v20200201
 - 所有文件均在该repo里面
+
+使用：
+```
+wget https://raw.githubusercontent.com/ss-daily-backup/brook-relay-doubi/master/brook-pf.sh && chmod +x brook-pf.sh
+bash brook-pf.sh
+```
