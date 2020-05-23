@@ -611,10 +611,10 @@ else
 	echo && echo -e "  Brook 端口转发 一键管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
   ---- Toyo | doub.io/wlzy-jc37 ----
   
- ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本
+ ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本  （已删除该功能，默认安装长期试验后的稳定版）
 ————————————
  ${Green_font_prefix} 1.${Font_color_suffix} 安装 Brook
- ${Green_font_prefix} 2.${Font_color_suffix} 更新 Brook
+ ${Green_font_prefix} 2.${Font_color_suffix} 更新 Brook（已删除该功能，默认安装长期试验后的稳定版）
  ${Green_font_prefix} 3.${Font_color_suffix} 卸载 Brook
 ————————————
  ${Green_font_prefix} 4.${Font_color_suffix} 启动 Brook
@@ -624,7 +624,7 @@ else
  ${Green_font_prefix} 7.${Font_color_suffix} 设置 Brook 端口转发
  ${Green_font_prefix} 8.${Font_color_suffix} 查看 Brook 端口转发
  ${Green_font_prefix} 9.${Font_color_suffix} 查看 Brook 日志
- ${Green_font_prefix}10.${Font_color_suffix} 监控 Brook 运行状态
+ ${Green_font_prefix}10.${Font_color_suffix} 监控 Brook 运行状态（一般情况下无需使用，直接安装后即含开机自启功能，开机启动后Brook几乎不会崩溃，没必要监控占用额外系统资源且引入更多的不稳定性）
 ————————————" && echo
 if [[ -e ${brook_file} ]]; then
 	check_pid
@@ -640,13 +640,13 @@ echo
 read -e -p " 请输入数字 [0-10]:" num
 case "$num" in
 	0)
-	Update_Shell
+	sleep 1
 	;;
 	1)
 	Install_brook
 	;;
 	2)
-	Update_brook
+	sleep 1
 	;;
 	3)
 	Uninstall_brook
